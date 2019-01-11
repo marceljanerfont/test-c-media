@@ -1,7 +1,7 @@
 #include <sstream>
 
-#include "../include/av_reader.h"
-#include "../include/ffmpeg_utils.h"
+#include "src/utils/av_reader.h"
+#include "src/utils/ffmpeg_utils.h"
 
 
 AVReader::AVReader(): m_pInputFormatContext(nullptr) {

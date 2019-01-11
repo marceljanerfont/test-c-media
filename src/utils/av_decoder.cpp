@@ -1,8 +1,8 @@
 #include <iostream>
 #include <sstream>
 
-#include "../include/av_decoder.h"
-#include "../include/ffmpeg_utils.h"
+#include "src/utils/av_decoder.h"
+#include "src/utils/ffmpeg_utils.h"
 
 
 AVDecoder::AVDecoder(): m_pCodec(nullptr)

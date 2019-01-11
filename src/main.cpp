@@ -2,11 +2,11 @@
 #include <thread>
 #include <chrono>
 
-#include "../include/ffmpeg_utils.h"
-#include "../include/av_reader.h"
-#include "../include/av_decoder.h"
-#include "../include/av_encoder.h"
-#include "../include/av_writer.h"
+#include "src/utils/ffmpeg_utils.h"
+#include "src/utils/av_reader.h"
+#include "src/utils/av_decoder.h"
+#include "src/utils/av_encoder.h"
+#include "src/utils/av_writer.h"
 
 extern "C" {
 #define __STDC_CONSTANT_MACROS

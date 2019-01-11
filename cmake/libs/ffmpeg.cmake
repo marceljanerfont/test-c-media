@@ -1,8 +1,7 @@
 
-## FFMPEG 4.0
-#set(FFMPEGDIR "ffmpeg-7395f13-lgpl")
-set(FFMPEGDIR "ffmpeg-4.0-win64-dev")
-set (MSVC12RUNTIME "microsoftVC_redist-12.0")
+## FFMPEG 4.1
+
+set(FFMPEGDIR "ffmpeg-4.1")
 include_directories("${APIS_PATH}/${FFMPEGDIR}/include")
 link_directories("${APIS_PATH}/${FFMPEGDIR}/lib")
 set(LIBS_FFMPEG  avcodec

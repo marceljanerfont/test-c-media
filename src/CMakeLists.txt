@@ -1,8 +1,7 @@
-file(GLOB SRCS "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
+file(GLOB_RECURSE SRCS *.cpp *.h *.rc )
 message("Main sources: ${SRCS}")
+add_definitions( -DUNICODE -D_UNICODE )
 
-include(../cmake/libs/ffmpeg.cmake)
 
-add_executable(main ${SRCS})
-target_link_libraries(main
-    ${LIBS_FFMPEG})
+add_executable(muxer ${SRCS})
+target_link_libraries(muxer ${LIBS_FFMPEG})

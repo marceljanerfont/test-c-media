@@ -1,7 +1,7 @@
 #include <sstream>
 
-#include "../include/av_writer.h"
-#include "../include/ffmpeg_utils.h"
+#include "src/utils/av_writer.h"
+#include "src/utils/ffmpeg_utils.h"
 
 
 AVWriter::AVWriter(): m_pOutputFormatContext(nullptr)

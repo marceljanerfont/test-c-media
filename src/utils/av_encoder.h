@@ -11,7 +11,7 @@ extern "C" {
 #include <libavutil/opt.h>
 }
 
-#include "../include/av_decoder.h"
+#include "src/utils/av_decoder.h"
 
 class AVEncoder {
 public:

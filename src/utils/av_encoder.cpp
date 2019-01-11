@@ -2,8 +2,8 @@
 #include <sstream>
 
 
-#include "../include/av_encoder.h"
-#include "../include/ffmpeg_utils.h"
+#include "src/utils/av_encoder.h"
+#include "src/utils/ffmpeg_utils.h"
 
 /* check that a given sample format is supported by the encoder */
 static int check_sample_fmt(const AVCodec *codec, enum AVSampleFormat sample_fmt)
