@@ -1,0 +1,10 @@
+//http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_surround-fix.avi
+ffmpeg -i bbb.avi -ss 00:03:00 -t 00:04:00 -async 1 -c:a aac -b:a 128k -c:v libx264 -preset slow -crf 20 cut.mp4
+ffmpeg -i cut.mp4 -c:a copy audio.aac
+ffmpeg -i cut.mp4 -c:v copy -bsf:v h264_mp4toannexb video.h264
+
+// works
+ffmpeg -re -i bbb.avi -c copy -f mpegts udp://224.0.0.0:1234
+ffmpeg -re -f h264 -fflags +genpts -use_wallclock_as_timestamps 1 -i video.h264 -c:v copy -f mpegts udp://224.0.0.0:1234
+ffplay -f mpegts -i udp://224.0.0.0:1234
+
